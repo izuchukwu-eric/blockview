@@ -6,6 +6,7 @@ import './scss/AppStyles.scss'
 import { Navbar, Nav, Container, Row, Card, Button } from 'react-bootstrap'
 
 import getConfig from './config'
+import MetaData from './components/MetaData'
 const { networkId } = getConfig(process.env.NODE_ENV || 'development')
 
 export default function App() {
@@ -27,7 +28,7 @@ export default function App() {
       </Navbar>
         {(window.accountId !== '') ?
           <Container>
-            <Row className='d-flex justify-content-center'>Meta Data</Row>
+            <Row className='d-flex justify-content-center'> <MetaData/> </Row>
             <Row className='d-flex justify-content-center'>Send Tokens</Row>
             <Row className='d-flex justify-content-center'>Active Keys</Row>
           </Container>
